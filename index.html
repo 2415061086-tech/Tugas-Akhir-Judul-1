@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Informasi Data Mahasiswa</title>
+</head>
+<body id="top">
+
+  <header>
+    <h1>Sistem Informasi Data Mahasiswa - Praktikum 1 - Kelas C</h1>
+    <p>Sistem sederhana untuk mengelola data mahasiswa aktif.</p>
+    <img src="MUHAMMAD ADHIYATMA RAZENDRA.jpg" alt="Logo Sistem" width="100" height="100">
+  </header>
+
+  <hr>
+
+  <nav>
+    <ul>
+      <li><a href="#informasi">Informasi Aplikasi</a></li>
+      <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+      <li><a href="#form-tambah">Tambah Mahasiswa Baru</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
+  <main>
+
+    <!-- Percobaan 1-2: Informasi Sistem -->
+    <section id="informasi">
+      <h2>Informasi Sistem</h2>
+      <p>Aplikasi ini digunakan untuk mengelola dan mendata mahasiswa aktif secara sederhana, meliputi penampilan daftar mahasiswa dan penambahan data baru.</p>
+
+      <article>
+        <h3>Fitur Utama</h3>
+        <p>Sistem menyediakan daftar mahasiswa dalam bentuk tabel dan formulir pendaftaran dengan validasi bawaan HTML5.</p>
+      </article>
+    </section>
+
+    <hr>
+
+    <section id="daftar-mahasiswa">
+      <h2>Daftar Mahasiswa Aktif</h2>
+      <p>Berikut adalah data mahasiswa yang saat ini terdaftar sebagai mahasiswa aktif.</p>
+
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Foto</th>
+            <th>NPM</th>
+            <th>Nama Lengkap</th>
+            <th>Program Studi</th>
+            <th>Angkatan</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><img src="MUHAMMAD ADHIYATMA RAZENDRA.jpg" alt="Foto Muhammad Adhiyatma Razendra" width="50" height="50"></td>
+            <td>2415061086</td>
+            <td>Muhammad Adhiyatma Razendra</td>
+            <td>Teknik Informatika</td>
+            <td>2024</td>
+            <td>zendra2006@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td><img src="gambar orang.png" alt="Foto Caesar Abdurrahman" width="50" height="50"></td>
+            <td>2415061024</td>
+            <td>Caesar Abdurrahman</td>
+            <td>Teknik Informatika</td>
+            <td>2024</td>
+            <td>Caesar2006@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td><img src="gambar orang.png" alt="Foto Raffi Ichwan Pramudya" width="50" height="50"></td>
+            <td>2455061017</td>
+            <td>Raffi Ichwan Pramudya</td>
+            <td>Teknik Informatika</td>
+            <td>2024</td>
+            <td>raffi2006@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="form-tambah">
+      <h2>Tambah Mahasiswa Baru</h2>
+      <p>Isi formulir berikut dengan lengkap untuk menambahkan data mahasiswa baru.</p>
+
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Data Mahasiswa</legend>
+
+          <p>
+            <label for="npm">Nomor Pokok Mahasiswa (NPM)</label><br>
+            <input type="text" id="npm" name="npm"
+                   placeholder="Contoh : 2415061086"
+                   required
+                   pattern="[0-9]{8,12}"
+                   title="NPM harus berupa angka 8-12 digit"><br>
+            <small>Isi dengan angka 8-12 digit.</small>
+          </p>
+
+          <p>
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama"
+                   placeholder="Contoh : Muhammad Adhiyatma Razendra"
+                   required
+                   minlength="3"
+                   maxlength="100"><br>
+            <small>Minimal 3 dan maksimal 100 karakter.</small>
+          </p>
+
+          <p>
+            <label for="program_studi">Program Studi:</label><br>
+            <select id="program_studi" name="program_studi" required>
+              <option value="">Pilih Program Studi</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+            </select><br>
+            <small>Pilih salah satu program studi.</small>
+          </p>
+
+          <p>
+            <label for="angkatan">Tahun Angkatan:</label><br>
+            <input type="number" id="angkatan" name="angkatan"
+                   placeholder="Contoh : 2024"
+                   required
+                   min="2018"
+                   max="2026"><br>
+            <small>Rentang tahun angkatan 2018 sampai 2026.</small>
+          </p>
+
+          <p>
+            <label for="email">Alamat Email:</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="Contoh : email@example.com"
+                   required><br>
+            <small>Gunakan alamat email yang aktif.</small>
+          </p>
+
+          <p>
+            <button type="submit">Simpan Data Mahasiswa</button>
+            <button type="reset">Reset Formulir</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <!-- Penutup: Footer -->
+  <footer>
+    <p>&copy; 2026 Muhammad Adhiyatma Razendra - Praktikum Pemrograman Web</p>
+    <p><a href="mailto:zendra2006@gmail.com">Hubungi Pengembang</a></p>
+    <p><a href="#top">&uarr; Kembali ke atas</a></p>
+  </footer>
+
+</body>
+</html>
